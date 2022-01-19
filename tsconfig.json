@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "lib": ["dom", "ES2015", "ES2016", "ES2017", "ES2018", "ES2019", "ES2020"],
+    "allowJs": true,
+    "checkJs": true,
+    "module": "commonjs",
+    "strict": true,
+    "jsx": "react",
+    "declaration": true,
+    "moduleResolution": "node",
+    // "emitDeclarationOnly": true,
+    "esModuleInterop": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "removeComments": true,
+    "strictFunctionTypes": true,
+    "noUnusedLocals": true, //쓰지않는 지역변수 있으면 에러내기
+    "noUnusedParameters": true, //쓰지않는 파라미터 있으면 에러내기
+    "noImplicitReturns": true, //함수에서 return 빼먹으면 에러내기 
+    "noFallthroughCasesInSwitch": true, //switch문 이상하면 에러내기 
+  },
+  "include": [ "**/*.ts", "**/*.tsx"],
+  "exclude": ["node_modules", ".storybook", "src", "imsDesign"]
+}

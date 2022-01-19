@@ -23,8 +23,7 @@ config = {
       {
         test: /\.(js|jsx|ts|tsx)$/,
         exclude: /node_modules/,
-        use: ['babel-loader']
-        //       use: ['babel-loader', 'ts-loader'],
+        use: ['babel-loader', 'ts-loader'],
       },
     ]
   }
@@ -40,10 +39,13 @@ const setEntry = () => {
 
   components.forEach(component => {
     entry[`${process.env.CLIENT}`] = {
-      import: `./components/${process.env.CLIENT}/${component.name}/index.jsx`,
+      import: `./components/${process.env.CLIENT}/${component.name}/index.tsx`,
       filename: `${process.env.CLIENT}/${component.name}/index.js`
     }
   })
+
+  // entry.index = './index.jsx';
+  // entry.rencar = './components/rencar/index.jsx'
 
   return config.entry = entry;
 }
