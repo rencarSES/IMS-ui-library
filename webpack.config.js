@@ -18,15 +18,16 @@ config = {
   resolve: {
     extensions: ['.js', '.jsx', '.ts', '.tsx'],
   },
-  // module: {
-  //   rules: [
-  //     {
-  //       test: /\.(js|jsx|ts|tsx)$/,
-  //       exclude: /node_modules/,
-  //       use: ['babel-loader', 'ts-loader'],
-  //     },
-  //   ]
-  // }
+  module: {
+    rules: [
+      {
+        test: /\.(js|jsx|ts|tsx)$/,
+        exclude: /node_modules/,
+        use: ['babel-loader']
+        //       use: ['babel-loader', 'ts-loader'],
+      },
+    ]
+  }
 }
 
 const setEntry = () => {
@@ -38,9 +39,9 @@ const setEntry = () => {
     });
 
   components.forEach(component => {
-    entry[`${process.env.CLIENT}`] = { 
-      import : `./components/${process.env.CLIENT}/${component.name}/index.tsx`, 
-      filename: `${process.env.CLIENT}/${component.name}/index.js` 
+    entry[`${process.env.CLIENT}`] = {
+      import: `./components/${process.env.CLIENT}/${component.name}/index.tsx`,
+      filename: `${process.env.CLIENT}/${component.name}/index.js`
     }
   })
 
