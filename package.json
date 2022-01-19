@@ -1,0 +1,30 @@
+{
+  "name": "ims-ui-library",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev:rencar": "CLIENT=rencar NODE_ENV=development webpack-dev-server --open",
+    "dev:form": "CLIENT=form NODE_ENV=development webpack-dev-server --open",
+    "build:rencar": "CLIENT=rencar NODE_ENV=production webpack",
+    "build:form": "CLIENT=form NODE_ENV=production webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rencarSES/IMS-ui-library.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rencarSES/IMS-ui-library/issues"
+  },
+  "homepage": "https://github.com/rencarSES/IMS-ui-library#readme",
+  "devDependencies": {
+    "webpack": "^5.66.0",
+    "webpack-dev-server": "^4.7.3"
+  },
+  "dependencies": {
+    "webpack-cli": "^4.9.1"
+  }
+}
