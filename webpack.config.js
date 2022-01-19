@@ -40,7 +40,7 @@ const setEntry = () => {
 
   components.forEach(component => {
     entry[`${process.env.CLIENT}`] = {
-      import: `./components/${process.env.CLIENT}/${component.name}/index.tsx`,
+      import: `./components/${process.env.CLIENT}/${component.name}/index.jsx`,
       filename: `${process.env.CLIENT}/${component.name}/index.js`
     }
   })
