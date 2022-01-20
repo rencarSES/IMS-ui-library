@@ -1,13 +1,15 @@
 import React from "react";
 import { ThemeProvider } from "styled-components";
+// import GlobalStyle from "assert/styles/GlobalStyle";
+import theme from "./styles/theme.ts";
 
 export const decorators = [
   (Story) => (
-    <ThemeProvider theme="default">
-      <StylesProvider injectFirst>
-        <GlobalStyle />
+    <ThemeProvider theme={theme}>
+      {/* <StylesProvider injectFirst> */}
+        {/* <GlobalStyle /> */}
         <Story />
-      </StylesProvider>
+      {/* </StylesProvider> */}
     </ThemeProvider>
   ),
 ];

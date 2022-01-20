@@ -3,7 +3,7 @@
   "parserOptions": {
     // "project": "./tsconfig.json",
     "ecmaVersion": 2018, // 최신 문법 지원
-    "sourceType": "module", // 모듈 시스템 사용시
+    "sourceType": "module" // 모듈 시스템 사용시
   },
   "env": {
     "node": true

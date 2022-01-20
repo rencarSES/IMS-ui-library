@@ -43,10 +43,8 @@ const setEntry = () => {
       filename: `${process.env.CLIENT}/${component.name}/index.js`
     }
   })
-
   // entry.index = './index.jsx';
   // entry.rencar = './components/rencar/index.jsx'
-
   return config.entry = entry;
 }
 
