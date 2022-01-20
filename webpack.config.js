@@ -2,7 +2,7 @@ const path = require('path');
 const fs = require('fs');
 
 config = {
-  mode: process.env.NODE_ENV,
+  mode: 'development',
   output: {
     // path: path.resolve(__dirname, 'imsDesign'),
     path: path.resolve(__dirname),
@@ -38,14 +38,18 @@ const setEntry = () => {
       return name.isDirectory() === true
     });
 
-  components.forEach(component => {
-    entry[`${process.env.CLIENT}`] = {
+  components.forEach((component, index)=> {
+    entry[`${process.env.CLIENT}${index}`] = {
       import: `./src/${process.env.CLIENT}/${component.name}/index.tsx`,
       filename: `${process.env.CLIENT}/${component.name}/index.js`
     }
   })
-  // entry.index = './index.jsx';
-  // entry.rencar = './components/rencar/index.jsx'
+
+  entry[`${process.env.CLIENT}`] = {
+    import: `./src/${process.env.CLIENT}/index.tsx`,
+    filename: `${process.env.CLIENT}/index.js`
+  }
+  
   return config.entry = entry;
 }
 
