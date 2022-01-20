@@ -4,7 +4,8 @@ const fs = require('fs');
 config = {
   mode: process.env.NODE_ENV,
   output: {
-    path: path.resolve(__dirname, 'imsDesign'),
+    // path: path.resolve(__dirname, 'imsDesign'),
+    path: path.resolve(__dirname),
     library: {
       name: 'IMS-design',
       type: 'umd',
@@ -32,14 +33,14 @@ config = {
 const setEntry = () => {
   const entry = {};
   const components = fs
-    .readdirSync(`./components/${process.env.CLIENT}`, { withFileTypes: true })
+    .readdirSync(`./src/${process.env.CLIENT}`, { withFileTypes: true })
     .filter(name => {
       return name.isDirectory() === true
     });
 
   components.forEach(component => {
     entry[`${process.env.CLIENT}`] = {
-      import: `./components/${process.env.CLIENT}/${component.name}/index.tsx`,
+      import: `./src/${process.env.CLIENT}/${component.name}/index.tsx`,
       filename: `${process.env.CLIENT}/${component.name}/index.js`
     }
   })

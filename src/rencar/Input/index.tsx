@@ -13,6 +13,7 @@ const Input = ({ backgroundColor, label, ...props }: RencarInputProps) => {
       // type={}
       placeholder='test'
       onChange={() => console.log('change')}
+      {...props}
     />
   )
 }
