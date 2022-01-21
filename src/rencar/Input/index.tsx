@@ -15,7 +15,9 @@ export default function Input({ backgroundColor, label, ...props }: RencarInputP
     //   onChange={() => console.log('change')}
     //   {...props}
     // />
-    <input />
+    <input 
+      {...props}
+    />
   )
 }
 
