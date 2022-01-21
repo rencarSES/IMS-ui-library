@@ -6,7 +6,7 @@ export interface RencarInputProps {
   label: string;
 }
 
-const Input = ({ backgroundColor, label, ...props }: RencarInputProps) => {
+export default function Input({ backgroundColor, label, ...props }: RencarInputProps) {
   return (
     <RencarInput 
       // value={}
@@ -17,8 +17,6 @@ const Input = ({ backgroundColor, label, ...props }: RencarInputProps) => {
     />
   )
 }
-
-export default Input;
 
 const RencarInput = styled.input`
   width: 100%;
