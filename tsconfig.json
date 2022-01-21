@@ -23,5 +23,5 @@
     "noFallthroughCasesInSwitch": true, //switch문 이상하면 에러내기 
   },
   "include": [ "**/*.ts", "**/*.tsx" ],
-  "exclude": ["node_modules", ".storybook", "stories"]
+  "exclude": ["node_modules", ".storybook", "stories", "**/*.stories.tsx", "./styles"]
 }
