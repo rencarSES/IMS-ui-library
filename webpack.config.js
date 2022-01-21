@@ -4,7 +4,6 @@ const fs = require('fs');
 config = {
   mode: 'development',
   output: {
-    // path: path.resolve(__dirname, 'imsDesign'),
     path: path.resolve(__dirname),
     library: {
       name: 'IMS-design',

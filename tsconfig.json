@@ -7,9 +7,9 @@
     "module": "commonjs",
     "strict": true,
     "jsx": "react",
-    // "rootDir": "./components",
-    // "declaration": true,
-    // "declarationDir": "./imsDesign",
+    // "rootDir": "./src",
+    "declaration": true,
+    // "declarationDir": "./types",
     // "emitDeclarationOnly": true,
     "moduleResolution": "node",
     "esModuleInterop": true,
@@ -22,6 +22,6 @@
     "noImplicitReturns": true, //함수에서 return 빼먹으면 에러내기 
     "noFallthroughCasesInSwitch": true, //switch문 이상하면 에러내기 
   },
-  "include": [ "**/*.ts", "**/*.tsx", "styles/theme.ts"],
-  "exclude": ["node_modules", ".storybook", "src", "imsDesign", "stories"]
+  "include": [ "**/*.ts", "**/*.tsx" ],
+  "exclude": ["node_modules", ".storybook", "stories"]
 }

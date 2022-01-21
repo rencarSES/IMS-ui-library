@@ -6,40 +6,9 @@
  * or disable the default devtool with "devtool: false".
  * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
  */
-(function webpackUniversalModuleDefinition(root, factory) {
-	if(typeof exports === 'object' && typeof module === 'object')
-		module.exports = factory();
-	else if(typeof define === 'function' && define.amd)
-		define([], factory);
-	else if(typeof exports === 'object')
-		exports["IMS-design"] = factory();
-	else
-		root["IMS-design"] = factory();
-})(self, function() {
-return /******/ (() => { // webpackBootstrap
+/******/ (() => { // webpackBootstrap
 /******/ 	"use strict";
-/******/ 	var __webpack_modules__ = ({
-
-/***/ "./src/rencar/Button/index.tsx":
-/*!*************************************!*\
-  !*** ./src/rencar/Button/index.tsx ***!
-  \*************************************/
-/***/ (() => {
-
-eval("\n\n//# sourceURL=webpack://IMS-design/./src/rencar/Button/index.tsx?");
-
-/***/ })
-
-/******/ 	});
-/************************************************************************/
 /******/ 	
-/******/ 	// startup
-/******/ 	// Load entry module and return exports
-/******/ 	// This entry module can't be inlined because the eval devtool is used.
-/******/ 	var __webpack_exports__ = {};
-/******/ 	__webpack_modules__["./src/rencar/Button/index.tsx"]();
 /******/ 	
-/******/ 	return __webpack_exports__;
 /******/ })()
 ;
-});
