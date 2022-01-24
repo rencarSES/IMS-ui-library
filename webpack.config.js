@@ -29,10 +29,10 @@ config = {
   },
   externals: {
     "styled-components": {
+      amd: "styled-components",
       root: "styled-components",
       commonjs: "styled-components",
       commonjs2: "styled-components",
-      amd: "styled-components"
     }
   }
 }

@@ -62,7 +62,7 @@ eval("\n\nif (false) {} else {\n  module.exports = __webpack_require__(/*! ./cjs
 
 /***/ "styled-components":
 /*!**************************************************************************************************************************************!*\
-  !*** external {"root":"styled-components","commonjs":"styled-components","commonjs2":"styled-components","amd":"styled-components"} ***!
+  !*** external {"amd":"styled-components","root":"styled-components","commonjs":"styled-components","commonjs2":"styled-components"} ***!
   \**************************************************************************************************************************************/
 /***/ ((module) => {
 
