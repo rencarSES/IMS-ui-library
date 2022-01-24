@@ -15,7 +15,7 @@
 		exports["IMS-design"] = factory(require("styled-components"));
 	else
 		root["IMS-design"] = factory(root["styled-components"]);
-})(self, function(__WEBPACK_EXTERNAL_MODULE_styled_components__) {
+})(this, function(__WEBPACK_EXTERNAL_MODULE_styled_components__) {
 return /******/ (() => { // webpackBootstrap
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
