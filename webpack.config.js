@@ -26,6 +26,14 @@ config = {
         use: ['babel-loader', 'ts-loader'],
       },
     ]
+  },
+  externals: {
+    "styled-components": {
+      root: "styled-components",
+      commonjs: "styled-components",
+      commonjs2: "styled-components",
+      amd: "styled-components"
+    }
   }
 }
 
