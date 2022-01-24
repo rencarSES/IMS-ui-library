@@ -8,7 +8,8 @@ config = {
     library: {
       name: 'IMS-design',
       type: 'umd',
-    }
+    },
+    globalObject: 'this'
   },
   devServer: {
     hot: true,
