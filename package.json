@@ -54,11 +54,5 @@
     "styled-normalize": "^8.0.7"
   },
   "dependencies": {},
-  "peerDependencies": {
-    "react": ">=16.9.0",
-    "react-dom": ">=16.9.0",
-    "@types/styled-components": "^5.1.20",
-    "styled-components": "^5.3.3",
-    "styled-normalize": "^8.0.7"
-  }
+  "peerDependencies": {}
 }
