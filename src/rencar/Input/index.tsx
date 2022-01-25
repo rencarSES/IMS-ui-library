@@ -7,7 +7,7 @@ export interface RencarInputProps {
   placeholder?: string;
   style?: object;
   // className: object;
-  onChange?: React.ChangeEventHandler<HTMLInputElement>;
+  onChange?: Function
   onBlur?: React.FocusEventHandler<HTMLInputElement>;
   onFocus?: React.FocusEventHandler<HTMLInputElement>;
   disabled?: boolean;
@@ -24,7 +24,7 @@ export default function Input({
   onBlur, onFocus, disabled, dataset, comma, ...props
 }: RencarInputProps) {
 
-  const handleChange = (e) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { minus } = props;
     let { value } = e.target;
     const numberReg = /[^0-9]+/g;

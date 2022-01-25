@@ -1,8 +1,17 @@
 import React from "react";
 export interface RencarInputProps {
-    value?: string | number;
-    onChange: React.ChangeEventHandler<HTMLInputElement>;
-    backgroundColor?: string;
-    label: string;
+    type?: 'text' | 'number' | 'password' | 'tel';
+    propValue?: string | number;
+    placeholder?: string;
+    style?: object;
+    onChange?: Function;
+    onBlur?: React.FocusEventHandler<HTMLInputElement>;
+    onFocus?: React.FocusEventHandler<HTMLInputElement>;
+    disabled?: boolean;
+    dataset?: string;
+    comma?: boolean;
+    maxLength?: number;
+    insuranceNum: boolean;
+    minus: boolean;
 }
-export default function Input({ backgroundColor, label, onChange, value, ...props }: RencarInputProps): JSX.Element;
+export default function Input({ type, propValue, maxLength, placeholder, style, onChange, onBlur, onFocus, disabled, dataset, comma, ...props }: RencarInputProps): JSX.Element;
