@@ -2,8 +2,8 @@ import React from "react";
 import styled from "styled-components";
 
 export interface RencarInputProps {
-  type?: 'text'|'password'|'tel'
-  value?: string | number
+  type?: 'text' | 'number' | 'password' | 'tel'
+  propValue?: string | number
   placeholder?: string;
   style?: object;
   // className: object;
@@ -12,28 +12,41 @@ export interface RencarInputProps {
   onFocus?: React.FocusEventHandler<HTMLInputElement>;
   disabled?: boolean;
   dataset?: string;
+
+  comma?: boolean
+  maxLength?: number
+  insuranceNum: boolean
+  minus: boolean
 }
 
 export default function Input({
-  type, value, placeholder, style, onChange,
-  onBlur, onFocus, disabled, dataset, ...props
+  type, propValue, maxLength, placeholder, style, onChange,
+  onBlur, onFocus, disabled, dataset, comma, ...props
 }: RencarInputProps) {
 
-  const getType = ()=> {
-    switch (type) {
-      case 'tel': return 'tel';
-      case 'password': return 'password';
-      default: return 'text';
+  const handleChange = (e) => {
+    const { minus } = props;
+    let { value } = e.target;
+    const numberReg = /[^0-9]+/g;
+    const minusReg = /[^-\d|0-9]+/g;
+    if (type === 'tel') value = value.replace(numberReg, '');
+    if (type === 'number') {
+      if (comma) value.split(',').join('');
+      if (minus) value = value.replace(minusReg, '');
+      if (!minus) value = value.replace(numberReg, '');
     }
-  }
+    if (maxLength) value = value.slice(0, maxLength);
+    onChange && onChange(value);
+  } 
 
   return (
     <RencarInput
-      type={getType()}
-      value={value}
+      type={type || 'text'}
+      value={propValue}
+      maxLength={maxLength}
       placeholder={placeholder}
       style={style}
-      onChange={onChange}
+      onChange={handleChange}
       onBlur={onBlur}
       onFocus={onFocus}
       disabled={disabled}
@@ -47,7 +60,8 @@ const RencarInput = styled.input`
   width: 120px;
   /* min-height: 44px; */
   height: 30px;
-  border: 1px solid #e6e6e6;
+  /* border: 1px solid #e6e6e6; */
+  border: 1px solid red;
   padding: 0 10px;
   outline: none;
   border-radius: 3px;
